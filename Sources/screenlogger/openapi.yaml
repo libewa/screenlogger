@@ -1,0 +1,34 @@
+paths:
+  /:
+    get:
+      summary: Return a basic info page
+      operationId: getInfoPage
+      description: ''
+      responses:
+        '200':
+          description: An info page
+          content:
+            text/html:
+              examples:
+                main-page:
+                  summary: main page
+                  externalValue: https://replit.com/@linusbw/screenlogger#templates/index.html
+    post:
+      operationId: addImage
+      summary: Upload an image
+      description: ''
+      responses:
+        '201':
+          description: 'yes'
+          content:
+            text/plain:
+              examples:
+                uplad-success:
+                  summary: main page
+                  value: Image Uploaded.
+        '500':
+          description: Internal server error (check python stdout)
+info:
+  title: screenlogger
+  version: 1.0.0
+openapi: 3.0.2
